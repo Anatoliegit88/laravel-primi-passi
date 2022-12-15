@@ -7,7 +7,12 @@
   <title>Laravel.primi.passi</title>
 </head>
 <body>
-  <h1> {{ $firstTitle}} </h1>
+  <h1> {{ $firstPage}} </h1>
+  <ul>
+    @foreach ($macchine as $macchina)
+      <li> {{$macchina}} </li>
+    @endforeach
+  </ul>
 
 </body>
 </html>
