@@ -15,5 +15,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $firstTitle = "Hello World!!";
+
     return view('home', compact("firstTitle"));
-});
+})->name("home");
+
+Route::get('/', function() {
+    $data = [
+        "firstPage" => "Concessionario",
+        "description" => "Macchine Premium",
+        "macchine" => [
+            "Alfa Romeo",
+            "BMW",
+            "Cadilac",
+            "Kamaz"
+        ],
+    ];
+    return view('home', $data);
+})->name("home");
+
+
